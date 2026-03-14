@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-banner contact-banner">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from restaurants, collaborators, and creative professionals.</p>
+    </div>
+</section>
+
+<section class="section contact-section">
+    <div class="container two-column contact-layout">
+        <div class="contact-info reveal-left">
+            <div class="content-card">
+                <h2>Get in Touch</h2>
+
+                <div class="contact-details">
+                    <div class="contact-detail-card">
+                        <h3>Location</h3>
+                        <p>Dallas, Texas</p>
+                    </div>
+
+                    <div class="contact-detail-card">
+                        <h3>Email</h3>
+                        <p>info@pixelmxstudio.com</p>
+                    </div>
+
+                    <div class="contact-detail-card">
+                        <h3>Phone</h3>
+                        <p>+1 (314) 000-0000</p>
+                    </div>
+                </div>
+
+                <p class="contact-description">
+                    Whether you are interested in partnership opportunities, general questions,
+                    or working with our team, feel free to reach out.
+                </p>
+
+                <div class="info-box contact-info-box">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM to 6:00 PM</p>
+                    <p>Saturday: 10:00 AM to 4:00 PM</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal-right">
+            <form method="POST" class="form-card contact-form">
+                <h2>Send a Message</h2>
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn btn-primary full-width">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

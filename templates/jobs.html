@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-banner jobs-banner">
+    <div class="container">
+        <h1>Careers at PixelMX Studio</h1>
+        <p>Join a creative team focused on photography, hospitality, and guest-centered experiences.</p>
+    </div>
+</section>
+
+<section class="section jobs-section">
+    <div class="container two-column jobs-layout">
+        <div class="jobs-info reveal-left">
+            <div class="content-card">
+                <h2>Open Roles</h2>
+
+                <div class="job-card premium-job-card">
+                    <h3>Restaurant Photographer</h3>
+                    <p>
+                        Capture authentic guest moments, celebrations, and restaurant ambience with a polished,
+                        professional approach.
+                    </p>
+                </div>
+
+                <div class="job-card premium-job-card">
+                    <h3>Sales & Partnership Assistant</h3>
+                    <p>
+                        Support outreach, explain our services to restaurants, and help build long-term partner relationships.
+                    </p>
+                </div>
+
+                <div class="job-card premium-job-card">
+                    <h3>Brand Experience Associate</h3>
+                    <p>
+                        Help coordinate on-site experiences and ensure our brand is represented professionally at partner locations.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal-right">
+            <form method="POST" class="form-card jobs-form">
+                <h2>Apply Now</h2>
+
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="position">Position</label>
+                <select id="position" name="position" required>
+                    <option value="">Select Position</option>
+                    <option value="Restaurant Photographer">Restaurant Photographer</option>
+                    <option value="Sales & Partnership Assistant">Sales & Partnership Assistant</option>
+                    <option value="Brand Experience Associate">Brand Experience Associate</option>
+                </select>
+
+                <label for="experience">Experience</label>
+                <input type="text" id="experience" name="experience" placeholder="Example: 2 years in event photography" required>
+
+                <label for="message">Why do you want to join us?</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn btn-primary full-width">Submit Application</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

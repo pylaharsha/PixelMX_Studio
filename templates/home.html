@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-bg-shape hero-shape-1"></div>
+    <div class="hero-bg-shape hero-shape-2"></div>
+
+    <div class="container hero-content">
+        <div class="hero-text reveal-up">
+            <h1>More Than a Photo, It’s a Branded Experience</h1>
+            <p>
+                PixelMX Studio helps restaurants create memorable guest experiences
+                through professional photography, branded keepsakes, and visual storytelling.
+            </p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('partnership') }}" class="btn btn-primary">Become a Partner</a>
+                <a href="{{ url_for('portfolio') }}" class="btn btn-secondary">View Portfolio</a>
+            </div>
+        </div>
+        <div class="hero-image reveal-right">
+            <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Restaurant photography">
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title reveal-up">Why Restaurants Choose PixelMX Studio</h2>
+        <div class="card-grid">
+            <div class="card reveal-up">
+                <h3>Brand Visibility</h3>
+                <p>Your restaurant logo becomes part of every framed memory guests take home.</p>
+            </div>
+            <div class="card reveal-up">
+                <h3>Professional Photography</h3>
+                <p>We capture authentic moments in low-light dining spaces with polished visual quality.</p>
+            </div>
+            <div class="card reveal-up">
+                <h3>Guest Experience</h3>
+                <p>Turn everyday dinners, birthdays, anniversaries, and celebrations into something unforgettable.</p>
+            </div>
+            <div class="card reveal-up">
+                <h3>Business Value</h3>
+                <p>Photos encourage word-of-mouth marketing, social sharing, and stronger customer recall.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section light-bg">
+    <div class="container">
+        <h2 class="section-title reveal-up">How It Works</h2>
+        <div class="steps">
+            <div class="step reveal-left">
+                <span>1</span>
+                <h3>Partner With Us</h3>
+                <p>We work with your restaurant to align branding, timing, and guest experience goals.</p>
+            </div>
+            <div class="step reveal-up">
+                <span>2</span>
+                <h3>We Capture Moments</h3>
+                <p>Our photographers visit your location and document genuine guest interactions.</p>
+            </div>
+            <div class="step reveal-up">
+                <span>3</span>
+                <h3>We Create Keepsakes</h3>
+                <p>Each image is turned into a professional, branded keepsake that reflects your restaurant identity.</p>
+            </div>
+            <div class="step reveal-right">
+                <span>4</span>
+                <h3>Guests Share the Experience</h3>
+                <p>Memories leave the restaurant with your brand attached, increasing loyalty and visibility.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-banner reveal-up">
+    <div class="container cta-inner">
+        <h2>Ready to elevate your restaurant experience?</h2>
+        <a href="{{ url_for('partnership') }}" class="btn btn-primary">Apply for Partnership</a>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const revealItems = document.querySelectorAll(".reveal-up, .reveal-left, .reveal-right");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.15 });
+
+    revealItems.forEach((item) => observer.observe(item));
+});
+</script>
+{% endblock %}

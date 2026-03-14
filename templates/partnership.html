@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-banner partnership-banner">
+    <div class="container">
+        <h1>Restaurant Partnership</h1>
+        <p>Partner with PixelMX Studio and create a guest experience that turns moments into branded memories.</p>
+    </div>
+</section>
+
+<section class="section partnership-section">
+    <div class="container two-column partnership-layout">
+        <div class="partnership-info reveal-left">
+            <div class="content-card">
+                <h2>Why Partner With Us</h2>
+                <ul class="styled-list premium-list">
+                    <li>Enhance your customer experience with professional photography</li>
+                    <li>Strengthen brand visibility through memorable take-home keepsakes</li>
+                    <li>Capture birthdays, anniversaries, family dinners, and special occasions</li>
+                    <li>Create shareable visual moments that extend beyond the restaurant</li>
+                    <li>Add a unique brand experience without interrupting service flow</li>
+                </ul>
+
+                <div class="info-box partnership-info-box">
+                    <h3>What You Gain</h3>
+                    <p>
+                        Our partnership model helps restaurants build stronger guest recall, richer visual branding,
+                        and a more premium in-person experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal-right">
+            <form method="POST" class="form-card partnership-form">
+                <h2>Apply for Partnership</h2>
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="restaurant_name">Restaurant Name</label>
+                <input type="text" id="restaurant_name" name="restaurant_name" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn btn-primary full-width">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

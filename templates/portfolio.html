@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-banner portfolio-banner">
+    <div class="container">
+        <h1>Our Portfolio</h1>
+        <p>Explore our work across dining experiences, food presentation, interior ambience, and special occasions.</p>
+    </div>
+</section>
+
+<section class="section portfolio-section">
+    <div class="container">
+        <div class="portfolio-grid">
+            <div class="portfolio-item reveal slide-left portfolio-slider"
+                 data-images="{{ url_for('static', filename='images/dining1.jpg') }},{{ url_for('static', filename='images/dining2.jpg') }},{{ url_for('static', filename='images/dining3.jpg') }}">
+                <div class="portfolio-image-wrapper">
+                    <img src="{{ url_for('static', filename='images/dining1.jpg') }}" alt="Dining moments">
+                    <div class="portfolio-overlay"></div>
+                    <div class="portfolio-hint">Click to view more</div>
+                </div>
+                <div class="portfolio-caption">
+                    <h3>Dining Moments</h3>
+                    <p>Authentic guest interactions captured with warmth and detail.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item reveal slide-right portfolio-slider"
+                 data-images="{{ url_for('static', filename='images/food1.jpg') }},{{ url_for('static', filename='images/food2.jpg') }},{{ url_for('static', filename='images/food3.jpg') }}">
+                <div class="portfolio-image-wrapper">
+                    <img src="{{ url_for('static', filename='images/food1.jpg') }}" alt="Food photography">
+                    <div class="portfolio-overlay"></div>
+                    <div class="portfolio-hint">Click to view more</div>
+                </div>
+                <div class="portfolio-caption">
+                    <h3>Food Photography</h3>
+                    <p>Stylized dish photography designed to showcase presentation and quality.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item reveal slide-left portfolio-slider"
+                 data-images="{{ url_for('static', filename='images/restaurant1.jpg') }},{{ url_for('static', filename='images/restaurant2.jpg') }},{{ url_for('static', filename='images/restaurant3.jpg') }}">
+                <div class="portfolio-image-wrapper">
+                    <img src="{{ url_for('static', filename='images/restaurant1.jpg') }}" alt="Restaurant interiors">
+                    <div class="portfolio-overlay"></div>
+                    <div class="portfolio-hint">Click to view more</div>
+                </div>
+                <div class="portfolio-caption">
+                    <h3>Restaurant Interiors</h3>
+                    <p>Visual storytelling that highlights ambiance, lighting, and atmosphere.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item reveal slide-right portfolio-slider"
+                 data-images="{{ url_for('static', filename='images/events1.jpg') }},{{ url_for('static', filename='images/events2.jpg') }},{{ url_for('static', filename='images/events3.jpg') }}">
+                <div class="portfolio-image-wrapper">
+                    <img src="{{ url_for('static', filename='images/events1.jpg') }}" alt="Special celebrations">
+                    <div class="portfolio-overlay"></div>
+                    <div class="portfolio-hint">Click to view more</div>
+                </div>
+                <div class="portfolio-caption">
+                    <h3>Special Celebrations</h3>
+                    <p>Professional coverage for birthdays, anniversaries, family gatherings, and memorable events.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

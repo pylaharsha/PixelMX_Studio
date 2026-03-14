@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-banner">
+    <div class="container">
+        <h1>About PixelMX Studio</h1>
+        <p>We create memorable restaurant photography experiences that blend storytelling, branding, and hospitality.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container two-column">
+        <div>
+            <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="About PixelMX Studio">
+        </div>
+        <div>
+            <h2>Who We Are</h2>
+            <p>
+                PixelMX Studio is a restaurant-focused photography brand dedicated to turning everyday dining
+                moments into lasting visual memories.
+            </p>
+            <p>
+                We work with restaurants to capture candid guest experiences, special celebrations, and the
+                overall atmosphere that makes each location unique.
+            </p>
+            <p>
+                Our goal is not only to deliver beautiful photography, but also to help restaurants strengthen
+                their identity through branded visual experiences that customers remember and share.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section light-bg">
+    <div class="container">
+        <h2 class="section-title">Our Mission</h2>
+        <p class="center-text narrow">
+            To help restaurants elevate guest experiences through professional photography, meaningful keepsakes,
+            and brand-centered storytelling.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">What Makes Us Different</h2>
+        <div class="card-grid three-col">
+            <div class="card">
+                <h3>Hospitality-Focused</h3>
+                <p>We understand restaurant environments and capture moments without disrupting the guest experience.</p>
+            </div>
+            <div class="card">
+                <h3>Brand-Oriented</h3>
+                <p>Our photography helps restaurants build recall, visibility, and customer connection.</p>
+            </div>
+            <div class="card">
+                <h3>Experience-Driven</h3>
+                <p>We preserve genuine celebrations, conversations, and memories that guests value long after the meal.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
